@@ -16,7 +16,8 @@ startEmbers(document.querySelector('.roost-bg'), { calm });
 const lean = side => {
   split.dataset.leaning = side ?? '';
   if (!side) delete split.dataset.leaning;
-  root.style.setProperty('--split', side === 'mac' ? '58' : side === 'windows' ? '42' : '50');
+  // A gentle lean: enough to feel the side respond, not so much that the middle swings about.
+  root.style.setProperty('--split', side === 'mac' ? '53' : side === 'windows' ? '47' : '50');
 };
 for (const el of document.querySelectorAll('.side')) {
   const side = el.dataset.choice;

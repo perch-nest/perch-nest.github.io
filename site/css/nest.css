@@ -25,7 +25,7 @@
   --card-line: rgba(20, 24, 32, .08);
   --shadow: 0 1px 2px rgba(16, 24, 40, .06), 0 12px 40px -12px rgba(16, 24, 40, .18);
   color-scheme: light;
-  transition: --split .55s cubic-bezier(.2, .8, .2, 1);
+  transition: --split .8s cubic-bezier(.25, .1, .25, 1);
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -149,7 +149,7 @@ canvas.bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; p
 .side:hover .side-inner, .side:focus-visible .side-inner { transform: translateY(-4px); }
 .side:hover .go, .side:focus-visible .go { gap: 12px; filter: brightness(1.06); }
 /* While one side is pointed at, the other steps back a little. */
-.split[data-leaning="mac"] .win .side-inner, .split[data-leaning="windows"] .mac .side-inner { opacity: .72; }
+.split[data-leaning="mac"] .win .side-inner, .split[data-leaning="windows"] .mac .side-inner { opacity: .86; }
 
 /* The middle: what the page is, sitting on the fade itself. */
 .center {
