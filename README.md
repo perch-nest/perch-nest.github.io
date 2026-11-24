@@ -15,6 +15,9 @@ Perch Nest is a shared, neutral site for two sibling projects:
 Perch Nest adds what only a shared home can: **your computers linked together**, so a device you pair once can reach
 your Mac and your PC, and **one relay** for all of them.
 
+The code both projects genuinely share (the protocol and the relay) lives once, in
+**[perch-nest/core](https://github.com/perch-nest/core)**, and each project pulls in a pinned version of it.
+
 Neither project is merged into the other. Each keeps its own repository, releases and design; this repository only
 brings their websites together at `https://perch-nest.github.io/` and holds the shared relay.
 

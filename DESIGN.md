@@ -162,8 +162,9 @@ Both projects, behind "served from the Nest" or "in a nest" checks, so nothing c
 - the website: a nest's computers in the list, the "Mac · Windows" switch, the join page;
 - the relay checks accepting `nest: "relay"`.
 
-The protocol pieces are written once, as plain ES modules shared the way `site/js/shared/` is now, so both projects
-use identical code for everything a computer and a device must agree on.
+The protocol pieces are written once, in [perch-nest/core](https://github.com/perch-nest/core) (the shared protocol and
+relay, which both projects pull in at a pinned version), so both projects use identical code for everything a computer
+and a device must agree on.
 
 ## Open questions
 
