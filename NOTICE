@@ -1,0 +1,10 @@
+Perch Nest
+https://github.com/perch-nest/perch-nest.github.io
+
+Perch Nest brings together Perch, created by Just-Rice (https://github.com/Just-Rice/perch), and Roost, a Windows port
+of Perch (https://github.com/faarisaahmed/roost). It is distributed under the same licence as both, the Apache License,
+Version 2.0 (see LICENSE).
+
+The protocol, the security model and the relay that Perch Nest builds on were designed and written by Just-Rice for
+Perch. The websites under /mac/ and /windows/ are built from the Perch and Roost repositories, unchanged, and keep their
+own licences and notices.
