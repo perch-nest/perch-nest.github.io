@@ -1,17 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Perch Nest">
+  <defs>
+    <!-- Perch's own bird (from Perch's icon), facing right -->
+    <g id="bird">
+      <path d="M31.5 18.5 25 15.5l2.6 6.4z"/>
+      <ellipse cx="38.5" cy="19.6" rx="7.6" ry="5.6"/>
+      <circle cx="44.2" cy="14.6" r="4.3"/>
+      <path d="m47.8 13.2 4.2 1.4-4.2 1.4z"/>
+    </g>
+  </defs>
   <rect width="64" height="64" rx="14" fill="#11141b"/>
   <!-- Perch's screen -->
   <rect x="11" y="27" width="42" height="25" rx="4.5" fill="none" stroke="#fff" stroke-width="4"/>
   <path d="M25 52h14" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-  <!-- two birds on it, facing each other: Perch (teal) and Roost (ember) -->
-  <g fill="#2dd4bf">
-    <ellipse cx="21" cy="21.4" rx="6.6" ry="5"/>
-    <circle cx="25.6" cy="16.9" r="4"/>
-    <path d="m29 15.8 2.8 1.2-2.8 1.2z"/>
+  <!-- two of Perch's birds on it, facing each other; the eyes tell them apart: Perch teal, Roost ember -->
+  <g fill="#fff">
+    <use href="#bird" transform="matrix(0.78 0 0 0.78 -10.06 5.34)"/>
+    <use href="#bird" transform="matrix(-0.78 0 0 0.78 74.06 5.34)"/>
   </g>
-  <g fill="#ff7a3d">
-    <ellipse cx="43" cy="21.4" rx="6.6" ry="5"/>
-    <circle cx="38.4" cy="16.9" r="4"/>
-    <path d="m35 15.8-2.8 1.2 2.8 1.2z"/>
-  </g>
+  <circle cx="25.2" cy="16.2" r="1.15" fill="#2dd4bf"/>
+  <circle cx="38.8" cy="16.2" r="1.15" fill="#ff7a3d"/>
 </svg>
