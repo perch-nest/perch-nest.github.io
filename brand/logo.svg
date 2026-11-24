@@ -12,11 +12,11 @@
   <!-- Perch's screen -->
   <rect x="11" y="27" width="42" height="25" rx="4.5" fill="none" stroke="#fff" stroke-width="4"/>
   <path d="M25 52h14" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-  <!-- two of Perch's birds on it, facing each other; the eyes tell them apart: Perch teal, Roost ember -->
+  <!-- two of Perch's birds on it, facing each other: Perch and Roost -->
   <g fill="#fff">
     <use href="#bird" transform="matrix(0.78 0 0 0.78 -10.06 5.34)"/>
     <use href="#bird" transform="matrix(-0.78 0 0 0.78 74.06 5.34)"/>
   </g>
-  <circle cx="25.2" cy="16.2" r="1.15" fill="#2dd4bf"/>
-  <circle cx="38.8" cy="16.2" r="1.15" fill="#ff7a3d"/>
+  <circle cx="25.2" cy="16.2" r="0.9" fill="#11141b"/>
+  <circle cx="38.8" cy="16.2" r="0.9" fill="#11141b"/>
 </svg>
