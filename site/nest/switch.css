@@ -1,0 +1,23 @@
+/* The Perch Nest strip, added to the top of every page of /mac/ and /windows/ by the build: back to the choice, or
+   straight to the other computer. It takes its own row (never covers the page) and is gone while a computer's screen
+   is showing. */
+.nest-strip {
+  position: relative; z-index: 2147483000;
+  box-sizing: border-box; width: 100%; max-width: none; margin: 0; flex: none; align-self: stretch; grid-column: 1 / -1;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  height: 40px; padding: 0 max(14px, env(safe-area-inset-right)) 0 max(14px, env(safe-area-inset-left));
+  font: 600 13px/1 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #11141b; color: #eef0f3;
+  border-bottom: 1px solid rgba(255, 255, 255, .06);
+}
+.nest-strip a { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; }
+.nest-strip a:focus-visible { outline: 2px solid #7aa7ff; outline-offset: 2px; }
+.nest-strip .nest-home img { width: 22px; height: 22px; border-radius: 6px; }
+.nest-strip .nest-home:hover { opacity: .85; }
+.nest-strip .nest-picks { display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: rgba(255, 255, 255, .07); }
+.nest-strip .nest-pick { padding: 6px 12px; color: #b9bdc6; }
+.nest-strip .nest-pick:hover { color: #fff; background: rgba(255, 255, 255, .07); }
+.nest-strip .nest-pick.nest-on.nest-mac { background: #0f766e; color: #fff; }
+.nest-strip .nest-pick.nest-on.nest-windows { background: #e0532a; color: #fff; }
+body.viewing .nest-strip { display: none; }
+@media (max-width: 420px) { .nest-strip .nest-home .nest-label { display: none; } }

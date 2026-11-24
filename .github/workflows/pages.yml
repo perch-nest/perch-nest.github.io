@@ -1,0 +1,48 @@
+# Builds the Perch Nest website (scripts/build.mjs: the landing page, Perch's site at /mac/ and Roost's at /windows/,
+# each from its own repository) and publishes it to https://perch-nest.github.io/ through the gh-pages branch.
+# Runs on every push, once a day (so each project's newest website appears here by itself), and by hand.
+name: Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 6 * * *'
+  workflow_dispatch:
+    inputs:
+      perch_ref:
+        description: Perch branch or tag
+        default: main
+      roost_ref:
+        description: Roost branch or tag
+        default: main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - name: Build
+        env:
+          PERCH_REF: ${{ inputs.perch_ref || 'main' }}
+          ROOST_REF: ${{ inputs.roost_ref || 'main' }}
+        run: node scripts/build.mjs
+      - name: Publish to the gh-pages branch
+        run: |
+          cd dist
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "Perch Nest website from ${GITHUB_SHA::7}"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" gh-pages

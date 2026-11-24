@@ -27,9 +27,14 @@ brings their websites together at `https://perch-nest.github.io/` and holds the 
 | `relay/` | The relay Worker for both projects, with a one-click "Deploy to Cloudflare" |
 | `scripts/` | The build that pulls each project's website from its own repository into `/mac/` and `/windows/` |
 
+## Building
+
+`node scripts/build.mjs` fetches both projects and builds the site into `dist/` (or `PERCH_DIR=../perch ROOST_DIR=../roost`
+for local checkouts). `.github/workflows/pages.yml` does the same on every push and daily, and publishes it.
+
 ## Status
 
-Design stage. Nothing here changes Perch or Roost until both projects accept it: Perch's side arrives as a pull
+The website is live. Linking computers is at the design stage. Nothing here changes Perch or Roost until both projects accept it: Perch's side arrives as a pull
 request to Perch, for its creator to review.
 
 ## Licence
