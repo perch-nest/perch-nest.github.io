@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<title>Perch Nest</title>
+<meta name="description" content="Reach your Mac or your Windows PC from any browser. Perch for Mac, by Just-Rice, and Roost for Windows.">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/nest.css">
+<!-- A choice made before goes straight there (js/nest.js); #choose always shows this page. -->
+<script src="js/remembered.js"></script>
+</head>
+<body>
+<canvas class="bg perch-bg" aria-hidden="true"></canvas>
+<canvas class="bg roost-bg" aria-hidden="true"></canvas>
+
+<header class="top">
+  <a class="brand" href="./#choose"><img src="img/logo.svg" alt="" width="30" height="30"><span>Perch Nest</span></a>
+</header>
+
+<main class="split" id="split">
+  <a class="side mac" id="pickMac" href="mac/connect.html" data-choice="mac" aria-describedby="macWhat">
+    <div class="side-inner">
+      <img class="app-icon" src="mac/img/icon.svg" alt="" width="88" height="88">
+      <p class="eyebrow">Perch</p>
+      <h2>My Mac</h2>
+      <p class="what" id="macWhat">The original, by Just-Rice. For macOS 13.5 and later.</p>
+      <span class="go">Connect to my Mac <span aria-hidden="true">→</span></span>
+      <span class="sub">or <span class="u" data-href="mac/">get Perch for your Mac</span></span>
+      <span class="last" hidden>Your last choice</span>
+    </div>
+  </a>
+  <a class="side win" id="pickWin" href="windows/connect.html" data-choice="windows" aria-describedby="winWhat">
+    <div class="side-inner">
+      <img class="app-icon" src="windows/img/icon.svg" alt="" width="88" height="88">
+      <p class="eyebrow">Roost</p>
+      <h2>My Windows PC</h2>
+      <p class="what" id="winWhat">Perch, brought to Windows. For Windows 10 and 11.</p>
+      <span class="go">Connect to my PC <span aria-hidden="true">→</span></span>
+      <span class="sub">or <span class="u" data-href="windows/">get Roost for your PC</span></span>
+      <span class="last" hidden>Your last choice</span>
+    </div>
+  </a>
+  <div class="center">
+    <h1>Your computer,<br>from any browser.</h1>
+    <p>Which one are you reaching?</p>
+  </div>
+</main>
+
+<footer class="bottom">
+  <p><a href="https://github.com/Just-Rice/perch">Perch</a> is the original, created by
+    <a href="https://github.com/Just-Rice">Just-Rice</a>. <a href="https://github.com/faarisaahmed/roost">Roost</a> is
+    its Windows port. Both are free and open source, with no account and no servers in between.</p>
+  <p class="small">Your choice is remembered on this device only. Change it any time with the Mac / Windows switch at
+    the top of each page. <a href="https://github.com/perch-nest">About Perch Nest</a></p>
+</footer>
+<script type="module" src="js/nest.js"></script>
+</body>
+</html>
